@@ -1,39 +1,61 @@
-SETUP LARAVEL PROJECT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup Laravel Project</title>
+</head>
+<body>
 
-1. Install Composer Dependencies
-Run: 
-composer install
+<h1>SETUP LARAVEL PROJECT</h1>
 
-2. Setup .env
+<h2>1. Install Composer Dependencies</h2>
 
- - Duplicate the .env.example file and rename it to .env
- - Open the .env file and set your database connection details
+<p>Run the following command in your terminal:</p>
 
- DB_CONNECTION=mysql
- DB_HOST=127.0.0.1
- DB_PORT=3306
- DB_DATABASE=laravel
- DB_USERNAME=sail
- DB_PASSWORD=password 
+<pre><code>composer install</code></pre>
 
+<h2>2. Setup .env</h2>
 
-3. Setup MySql Container
-Run:
+<ul>
+  <li>Duplicate the <code>.env.example</code> file and rename it to <code>.env</code>.</li>
+  <li>Open the <code>.env</code> file and set your database connection details:</li>
+</ul>
 
-./vendor/bin/sail up -d
+<pre><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=sail
+DB_PASSWORD=password</code></pre>
 
-4. Migrate the Database
+<h2>3. Setup MySQL Container</h2>
 
-Run:
-php artisan migrate
+<p>Run the following command:</p>
 
-5. Seed the Database
+<pre><code>./vendor/bin/sail up -d</code></pre>
 
-Run:
-php artisan db:seed
+<h2>4. Migrate the Database</h2>
 
-6. Start the Development Server
-php artisan serve
+<p>Run the following command:</p>
 
+<pre><code>php artisan migrate</code></pre>
 
+<h2>5. Seed the Database</h2>
 
+<p>Run the following command:</p>
+
+<pre><code>php artisan db:seed</code></pre>
+
+<h2>6. Start the Development Server</h2>
+
+<p>Run the following command:</p>
+
+<pre><code>php artisan serve</code></pre>
+
+<h2>Docker Setup (Optional)</h2>
+
+<p>If you are using Docker for your Laravel project, make sure Docker is installed and configured properly. You can use Laravel Sail for Docker setup, which is already included in Laravel projects by default.</p>
+
+</body>
+</html>
